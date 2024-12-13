@@ -1,0 +1,142 @@
+"""
+programme fait par : Arthur Wells
+Groupe : 406
+Description : TP4.1
+"""
+
+
+from math import pi
+from random import randint
+from dataclasses import dataclass
+
+class StringFoo:
+    def __init__(self):
+        self.message = ""
+    def greetings(self):
+        print(self.message)
+
+    def set_string(self, message, majuscule):
+        grandeur = 10
+        self.message = message
+
+    def print_string(self):
+        print(self.message.upper())
+
+str1 = StringFoo()
+str1.message = "Table"
+str1.greetings()
+str1.print_string()
+str1.set_string("Chaise", 99)
+str1.greetings()
+
+
+
+
+
+
+
+
+
+class rectangle:
+    def __init__(self, longueur, largeur):
+        self.longueur = longueur
+        self.largeur = largeur
+        aire = 0
+
+    def calcul_aire(self):
+        self.aire = self.longueur * self.largeur
+
+    def resultats(self):
+        print(self.aire)
+
+
+rectangle1 = rectangle(10, 45)
+
+rectangle1.calcul_aire()
+rectangle1.resultats()
+
+
+
+
+
+class Cercle:
+    def __init__(self, rayon):
+        self.rayon = rayon
+        self.aire = 0
+        self.circonference = 0
+
+    def calcul_aire(self):
+        self.aire = pi * self.rayon * self.rayon
+
+    def calcul_circonference(self):
+        self.circonference = 2 * pi * self.rayon
+
+    def resultats(self):
+        print(self.aire)
+
+
+cercle1 = Cercle(5)
+
+cercle1.calcul_aire()
+cercle1.calcul_circonference()
+cercle1.resultats()
+
+
+
+class hero:
+    def __init__(self, nom):
+        self.vie = randint(1, 10) + randint(1, 10)
+        self.attaque = randint(1, 6)
+        self.defense = randint (1, 6)
+        self.nom = nom
+
+    def faire_attaque(self):
+        return self.attaque + randint(1, 6)
+
+    def recevoir_dommage(self):
+        self.vie -= dommage - self.defense
+
+    def est_vivant(self):
+        return self.vie > 0
+
+
+hero1 = hero("Arthur")
+if hero1.est_vivant():
+    print("vivant")
+
+
+
+@dataclass
+class player:
+    def __innit__(self):
+        force: int = randint(1,20)
+        dexterity: int = randint(1,20)
+        consitution: int = randint(1,20)
+        intelligence: int = randint(1,20)
+        sagesse: int = randint(1,20)
+        charisme: int = randint(1,20)
+
+
+class hero:
+    def __init__(self, nom):
+        self.vie = randint(1, 10) + randint(1, 10)
+        self.attaque = randint(1, 6)
+        self.defense = randint (1, 6)
+        self.nom = nom
+
+    def faire_attaque(self):
+        return self.attaque + randint(1, 6)
+
+    def recevoir_dommage(self):
+        self.vie -= dommage - self.defense
+
+    def est_vivant(self):
+        return self.vie > 0
+
+
+hero1 = hero("Arthur")
+if hero1.est_vivant():
+    print("vivant")
+    
+
+
